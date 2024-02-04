@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService{
     private UserRepo userRepo;
@@ -15,7 +16,7 @@ public class UserServiceImpl implements UserService{
     }
     @Override
     public List<UserDomain> allUsers() {
-        return null;
+        return userRepo.findAll();
     }
 
     @Override
